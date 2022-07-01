@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<bean id="myBook" class="core_container_Bag.Book">
+		<property name="bookname" value="Classmate"></property>
+		<property name="brand" value="Standard"></property>
+	</bean>
+
+	<bean id="myBag" class="core_container_Bag.Bag">
+		<property name="name" value="WildCraft"></property>
+		<property name="feature" value="good"></property>
+		<property name="book" ref="myBook"></property>
+	</bean>
+
+</beans>
